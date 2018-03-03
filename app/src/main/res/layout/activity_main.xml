@@ -6,4 +6,138 @@
     android:layout_height="match_parent"
     tools:context="com.android.eam.gestioncelulares.MainActivity">
 
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="3dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="68dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="244dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Bienvenido a la aplicación"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="69dp"
+                android:layout_height="114dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="259dp"
+                android:layout_height="114dp"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Ingrese nombre de usuario"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Ingrese password"
+                    android:inputType="textPassword"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="69dp"
+                android:layout_height="114dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="231dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="419dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INICIAR" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTRARSE" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="231dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="156dp" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
