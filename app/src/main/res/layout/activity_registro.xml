@@ -4,106 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.eam.gestioncelulares.MainActivity">
+    tools:context="com.android.eam.gestioncelulares.Activities.RegistroActivity">
 
     <LinearLayout
-        android:layout_width="315dp"
-        android:layout_height="450dp"
+        android:layout_width="304dp"
+        android:layout_height="445dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="3dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="68dp" />
+            android:layout_height="21dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="31dp"
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="244dp"
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Bienvenido a la aplicación"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
+                android:text="Registra tus datos personales"
+                android:textAlignment="center" />
 
             <Space
-                android:layout_width="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="114dp"
+            android:layout_height="216dp"
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="69dp"
-                android:layout_height="114dp"
+                android:layout_width="59dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <LinearLayout
-                android:layout_width="259dp"
-                android:layout_height="114dp"
+                android:layout_width="257dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="17dp" />
+                    android:layout_height="10dp" />
 
                 <EditText
-                    android:id="@+id/txtNombreUsu"
+                    android:id="@+id/txtNombreCompleto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Ingrese nombre de usuario"
+                    android:hint="Ingrese nombres completos"
                     android:inputType="textPersonName"
-                    android:singleLine="true"
                     android:textSize="15sp" />
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="17dp" />
+                    android:layout_height="10dp" />
 
                 <EditText
-                    android:id="@+id/txtPassword"
+                    android:id="@+id/txtNombreUsu"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Ingrese nombre de usuario"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/txtContrasena1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
                     android:ems="10"
                     android:hint="Ingrese password"
                     android:inputType="textPassword"
                     android:textSize="15sp" />
 
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/txtContrasena2"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:ems="10"
+                    android:hint="Verifica tu password"
+                    android:inputType="textPassword"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <Space
-                android:layout_width="69dp"
-                android:layout_height="114dp"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="131dp"
+            android:layout_height="72dp"
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="231dp"
+                android:layout_width="93dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <LinearLayout
-                android:layout_width="419dp"
+                android:layout_width="276dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -113,25 +137,16 @@
                     android:layout_height="16dp" />
 
                 <Button
-                    android:id="@+id/btnIniciar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="INICIAR" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="11dp" />
-
-                <Button
                     android:id="@+id/btnRegistrar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="solicitarRegistrarUsuario"
-                    android:text="REGISTRARSE" />
+                    android:onClick="registrarUsuario"
+                    android:text="Registrarse" />
+
             </LinearLayout>
 
             <Space
-                android:layout_width="231dp"
+                android:layout_width="94dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
@@ -139,14 +154,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="19dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="mostrarUsuarios"
-            android:text="Button" />
+            android:layout_height="106dp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
