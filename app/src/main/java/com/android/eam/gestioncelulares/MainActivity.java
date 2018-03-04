@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.eam.gestioncelulares.Activities.MenuActivity;
 import com.android.eam.gestioncelulares.Activities.RegistroActivity;
 import com.android.eam.gestioncelulares.Entidades.ClsInventario;
 import com.android.eam.gestioncelulares.Entidades.ClsMarca;
@@ -18,10 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Definicion de variables
     private EditText txtNombreUsu,txtPassword;
-    private ArrayList<ClsUsuario> usuarios;
-    private ArrayList<ClsInventario> inventarios;
-    private ArrayList<ClsMarca> marcas;
-    private boolean ejecucion = true;
+    public static ArrayList<ClsUsuario> usuarios = new ArrayList<>();
+    public static ArrayList<ClsInventario> inventarios = new ArrayList<>();
+    public static ArrayList<ClsMarca> marcas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,23 +31,45 @@ public class MainActivity extends AppCompatActivity {
         //Capturacion de los EditText del ActivityMain ---> nombre de usuario y contraseña
         this.txtNombreUsu = findViewById(R.id.txtNombreUsu);
         this.txtPassword = findViewById(R.id.txtPassword);
-
-        //iniciacion de estructuras de datos
-        this.usuarios = new ArrayList<>();
-        this.marcas = new ArrayList<>();
-        this.inventarios = new ArrayList<>();
     }
 
     public void solicitarRegistrarUsuario(View view){
-        Intent intent = new Intent(this, RegistroActivity.class);//instanciacion e iniciacion del intent en registro de usuarios
-        intent.putExtra("usuarios",this.usuarios);
-        startActivity(intent);//llamada a el activity RegistroActivity
-        Toast.makeText(this,"asddadadaddasdada",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, RegistroActivity.class));
     }
 
-    public void mostrarUsuarios(View view){
-        for (int i = 0;i < usuarios.size();i++){
-            Toast.makeText(this,"Usuario Creado: "+usuarios.get(i).getNombreCompleto(),Toast.LENGTH_SHORT).show();
+    public void iniciarSesion(View view){
+        String nombreUsu,pass;
+
+        nombreUsu = this.txtNombreUsu.getText().toString().trim();
+        pass = this.txtPassword.getText().toString().trim();
+
+        if (nombreUsu.isEmpty() || pass.isEmpty()){
+            Toast.makeText(this,"Debe Llenar Todos Los Campos",Toast.LENGTH_SHORT).show();
+            return;
         }
+
+        ClsUsuario usuario = null;
+
+        for (int i = 0;i < usuarios.size();i++){
+            if (nombreUsu.equals(usuarios.get(i).getNombreUsu()) && pass.equals(usuarios.get(i).getPassword())) {
+                usuario = usuarios.get(i);
+                break;
+            }
+            if (i == usuarios.size()-1){
+                Toast.makeText(this,"No Se Encontro Coincidencia Entre" +
+                        "\nEl Nombre De Usuario Y La Contraseña" +
+                        "\nO Es Posible Que Usted No Se Haya Registrado",Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+
+        this.txtNombreUsu.setText("");
+        this.txtPassword.setText("");
+
+        Intent intent = new Intent(this, MenuActivity.class);
+
+        intent.putExtra("usuario",usuario);
+
+        startActivity(intent);
     }
 }

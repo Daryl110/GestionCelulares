@@ -55,13 +55,16 @@ public class RegistroActivity extends AppCompatActivity {
 
         ClsUsuario usuario = new ClsUsuario(nombreCompleto,nombreUsu,pass1);
 
-        Bundle bundle = getIntent().getExtras();
+        for (int i = 0;i < MainActivity.usuarios.size();i++){
+            if (usuario.getNombreUsu().equals(MainActivity.usuarios.get(i).getNombreUsu())){
+                Toast.makeText(this,"El Nombre De Usuario Ya Existe",Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
 
-        ArrayList<ClsUsuario> usuarios = (ArrayList<ClsUsuario>) bundle.get("usuarios");
+        MainActivity.usuarios.add(usuario);
 
-        usuarios.add(usuario);
-
-        startActivity(new Intent(this,MainActivity.class));
+        Toast.makeText(this,"Usuario: "+nombreCompleto+". Creado Con Exito",Toast.LENGTH_SHORT).show();
 
         this.finish();
     }

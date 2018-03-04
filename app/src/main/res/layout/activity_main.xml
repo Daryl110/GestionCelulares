@@ -116,6 +116,7 @@
                     android:id="@+id/btnIniciar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="iniciarSesion"
                     android:text="INICIAR" />
 
                 <Space
@@ -139,14 +140,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="19dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="mostrarUsuarios"
-            android:text="Button" />
+            android:layout_height="114dp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
