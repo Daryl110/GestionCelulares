@@ -7,15 +7,15 @@
     tools:context="com.android.eam.gestioncelulares.Activities.MenuActivity">
 
     <LinearLayout
-        android:layout_width="304dp"
-        android:layout_height="437dp"
+        android:layout_width="346dp"
+        android:layout_height="497dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="38dp" />
+            android:layout_height="74dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:orientation="horizontal">
 
                 <Space
-                    android:layout_width="35dp"
+                    android:layout_width="56dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
@@ -47,12 +47,13 @@
                         android:layout_height="35dp"
                         android:text="Bienvenido:"
                         android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="207dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
@@ -72,6 +73,7 @@
                         android:layout_height="35dp"
                         android:text="TextView"
                         android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
                         android:textSize="18sp" />
                 </LinearLayout>
 
@@ -84,7 +86,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="62dp" />
+            android:layout_height="35dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,8 +106,10 @@
                 <Button
                     android:id="@+id/btnMarcas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Registrar marca celular" />
+                    android:layout_height="75dp"
+                    android:onClick="solicitarCrearMarca"
+                    android:text="Registrar marca celular"
+                    android:textSize="16sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -114,8 +118,10 @@
                 <Button
                     android:id="@+id/btnCrearInventario"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Nuevo ingreo inventario" />
+                    android:layout_height="75dp"
+                    android:onClick="solicitarCrearInventario"
+                    android:text="Nuevo ingreo inventario"
+                    android:textSize="16sp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -124,8 +130,10 @@
                 <Button
                     android:id="@+id/btnListarInventario"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="75dp"
+                    android:onClick="solicitarListarInventario"
                     android:text="Ver listado inventario"
+                    android:textSize="16sp"
                     android:visibility="visible" />
             </LinearLayout>
 
