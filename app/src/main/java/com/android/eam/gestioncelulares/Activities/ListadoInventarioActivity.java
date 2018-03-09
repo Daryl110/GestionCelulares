@@ -87,8 +87,6 @@ public class ListadoInventarioActivity extends AppCompatActivity {
                 datosEncontrados.add(MainActivity.inventarios.get(i).getImeiCelular()+" - "+
                         MainActivity.inventarios.get(i).getNombreMarcaCelular()+" - "+
                         MainActivity.inventarios.get(i).getNombreCelular());
-
-                break;
             }
         }
 
