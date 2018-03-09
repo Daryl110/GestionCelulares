@@ -166,7 +166,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="245dp"
+            android:layout_height="269dp"
             android:orientation="horizontal">
 
             <Space
@@ -219,10 +219,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="47dp" />
 
     </LinearLayout>
 
